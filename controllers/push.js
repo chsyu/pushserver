@@ -17,7 +17,7 @@ module.exports = function (req, res, next) {
     to: pushToken,
     sound: 'default',
     body: message,
-    data: { withSome: 'data' },
+    data: { text: message },
   }]).then((receipts => {
       console.log('Finished...')
       console.log(receipts)
