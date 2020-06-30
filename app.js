@@ -6,6 +6,10 @@ var express     = require('express'),
     routers     = require('./routers'),
     port        = process.env.PORT || 3000;
 
+
+// CORS setting
+app.use(cors());
+    
 // view engine setup
 app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'ejs');
@@ -17,8 +21,5 @@ app.use(bodyParser.json());
 
 // router setup
 app.use('/', routers);
-
-// CORS setting
-app.use(cors());
 
 app.listen(port);
