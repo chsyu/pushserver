@@ -1,4 +1,5 @@
 var express     = require('express'),
+    cors        = require('cors'),
     app         = express(),
     path        = require('path'),
     bodyParser  = require('body-parser'),
@@ -16,5 +17,8 @@ app.use(bodyParser.json());
 
 // router setup
 app.use('/', routers);
+
+// CORS setting
+app.use(cors());
 
 app.listen(port);

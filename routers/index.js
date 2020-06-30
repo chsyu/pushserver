@@ -5,6 +5,8 @@ var express = require('express'),
 
 router.route('/')
   .get(index);
+
 router.route('/tokens')
   .post(push);
+  
 module.exports = router;
